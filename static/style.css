@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  margin: 7px;
+  width: 260px;
+  height: 18px;
+  text-transform: capitalize;
+}
+
+label {
+  /* display: inline-block; */
+  width: 100px;
+  text-transform: capitalize;
+  /* margin: 25px; */
+}
+
+textarea {
+  margin: 7px;
+  width: 260px;
+  height: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-form {
+  display: inline-block;
+  width: 100px;
+  text-transform: capitalize;
+}
+
+#btn-add-user,
+#btn-add-post {
+  width: 80px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+.btn {
+  width: 70px;
+  height: 30px;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #4caf50;
+}
+
+#btn-add {
+  margin-left: 200px;
+}
+
+#edit-user-cancel,
+#post-edit-cancel {
+  margin-left: 150px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#btn-save {
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+#post-content,
+#post-show-form {
+  padding: 8px;
+}
+
+#post-author {
+  color: purple;
+}
+
+#post-show-form {
+  padding-top: 10px;
+}
+
+.btn-cancel {
+  background-color: rgb(189, 185, 179);
+  color: rgb(62, 62, 211);
+}
+
+#post-show-buttons {
+  margin-left: 10px;
+}
+
+.form-check-box {
+  margin-left: -10px;
+}
+
+.check-box-lable {
+  margin-left: -110px;
+}
+
+.tag-name {
+  color: white;
+  background-color: blue;
+  border: 3px solid blue;
+  border-radius: 5px;
+}

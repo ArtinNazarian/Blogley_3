@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Post Detail Page</h1>
+
+<div id="post-content">
+  <h3>{{post.title}}</h3>
+  <p>{{post.content}}</p>
+  <p><i id="post-author">By {{post.user.full_name}}</i></p>
+
+  {% if post.tags %}
+  <p>
+    <b>Tags:</b>
+    {% for tag in post.tags %}
+    <a href="/tags/{{tag.id}}"><i class="tag-name">{{tag.name}}</i></a>
+    {% endfor %}
+  </p>
+  {% endif %}
+</div>
+
+<form id="post-show-buttons">
+  <button
+    class="btn btn-cancel"
+    formmethod="GET"
+    formaction="/users/{{post.user_id}}"
+  >
+    Cancel
+  </button>
+  <button
+    class="btn btn-edit"
+    formmethod="GET"
+    formaction="/posts/{{post.id}}/edit"
+  >
+    Edit
+  </button>
+  <button
+    class="btn btn-delete"
+    formmethod="POST"
+    formaction="/posts/{{post.id}}/delete"
+  >
+    Delete
+  </button>
+</form>
+
+{% endblock %}

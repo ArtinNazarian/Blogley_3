@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Add Post for {{user.full_name}}</h1>
+
+<form class="new-post" method="POST">
+  <div id="new-post-div">
+    <lable class="post-form">Title</lable>
+    <input type="text" name="title" />
+    <br />
+    <lable class="post-form">Content</lable>
+    <textarea type="text" name="content"></textarea>
+    <br />
+    {% for tag in tags %}
+    <input
+      class="form-check-box"
+      type="checkbox"
+      value="{{tag.id}}"
+      id="tag_{{tag.id}}"
+      name="tags"
+    />
+    <label class="check-box-lable">{{tag.name}}</label><br />
+    {% endfor %}
+    <div class="post-btn">
+      <a href="/users/{{user.id}}" class="btn btn-cancel">Cancel</a>
+      <button class="btn" id="btn-add-content">Add</button>
+    </div>
+  </div>
+</form>
+{% endblock %}
